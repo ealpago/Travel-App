@@ -7,3 +7,10 @@
 
 import Foundation
 
+struct Constants{
+    static let shared = Constants()
+    
+    let tableViewStoryBoardIdentifier = "TableViewController"
+    let collectionViewSotyBoardIdentifier = "CollectionViewController"
+    
+}
