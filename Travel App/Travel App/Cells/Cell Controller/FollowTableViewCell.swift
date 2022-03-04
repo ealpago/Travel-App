@@ -8,6 +8,14 @@
 import UIKit
 
 class FollowTableViewCell: UITableViewCell {
+    
+    static let identifier = "FollowTableViewCell"
+
+    @IBOutlet var profileImage: UIImageView?
+    @IBOutlet var nameLabel: UILabel?
+    @IBOutlet var startedLabel: UILabel?
+    @IBOutlet var timeLabel: UILabel?
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()
