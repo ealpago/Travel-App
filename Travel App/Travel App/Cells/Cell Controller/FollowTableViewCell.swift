@@ -13,8 +13,10 @@ class FollowTableViewCell: UITableViewCell {
 
     @IBOutlet var profileImage: UIImageView?
     @IBOutlet var nameLabel: UILabel?
-    @IBOutlet var startedLabel: UILabel?
+    @IBOutlet var explanationLabel: UILabel?
     @IBOutlet var timeLabel: UILabel?
+    private var itemModel: TableViewItemModel?
+
     
 
     override func awakeFromNib() {
@@ -22,10 +24,13 @@ class FollowTableViewCell: UITableViewCell {
         // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    func setupCell(cellModel: TableViewItemModel) {
+        itemModel = cellModel
+        if let itemModel = self.itemModel {
+            profileImage?.image = UIImage(named: itemModel.profileImage ?? "")
+            nameLabel?.text = itemModel.nameLabel
+            explanationLabel?.text = itemModel.explanationLabel
+            timeLabel?.text = itemModel.timeLabel
+        }
     }
-    
 }

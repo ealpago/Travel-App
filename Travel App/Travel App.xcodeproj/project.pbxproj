@@ -14,7 +14,6 @@
 		D18C2CB427D0DB540046AEDE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D18C2CB227D0DB540046AEDE /* Main.storyboard */; };
 		D18C2CB927D0DB560046AEDE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D18C2CB727D0DB560046AEDE /* LaunchScreen.storyboard */; };
 		D18E674327D1EB9700305D9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D18E674227D1EB9700305D9D /* Assets.xcassets */; };
-		D18E674527D20E7C00305D9D /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18E674427D20E7C00305D9D /* TabbarViewController.swift */; };
 		D18E674C27D237DA00305D9D /* TableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18E674B27D237DA00305D9D /* TableViewModel.swift */; };
 		D18E674E27D23B3200305D9D /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18E674D27D23B3100305D9D /* BaseTabBarController.swift */; };
 		D18E675027D2462100305D9D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18E674F27D2462100305D9D /* Constants.swift */; };
@@ -38,7 +37,6 @@
 		D18C2CB827D0DB560046AEDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D18C2CBA27D0DB560046AEDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D18E674227D1EB9700305D9D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D18E674427D20E7C00305D9D /* TabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
 		D18E674B27D237DA00305D9D /* TableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewModel.swift; sourceTree = "<group>"; };
 		D18E674D27D23B3100305D9D /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		D18E674F27D2462100305D9D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -130,7 +128,6 @@
 		D18E674827D2327100305D9D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				D18E674427D20E7C00305D9D /* TabbarViewController.swift */,
 				D18C2CB027D0DB540046AEDE /* TableViewController.swift */,
 				D178162F27D14CF100CB3372 /* CollectionViewController.swift */,
 				D18E674D27D23B3100305D9D /* BaseTabBarController.swift */,
@@ -239,7 +236,6 @@
 				D18C2CAF27D0DB540046AEDE /* SceneDelegate.swift in Sources */,
 				D1961B5E27D0EFF300F59236 /* FollowTableViewCell.swift in Sources */,
 				D1961B5627D0EF5100F59236 /* CollectionTableViewCell.swift in Sources */,
-				D18E674527D20E7C00305D9D /* TabbarViewController.swift in Sources */,
 				D18E675027D2462100305D9D /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
