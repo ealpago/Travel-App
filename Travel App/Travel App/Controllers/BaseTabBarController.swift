@@ -24,18 +24,18 @@ enum TabbarItemType {
     func image() -> UIImage{
         switch self{
         case .tableView:
-            return UIImage(named: "icons8-notification-50")!
+            return UIImage(named: "notification-2")!
         case .collectionView:
-            return UIImage(named: "icons8-home-50")!
+            return UIImage(named: "home-2")!
         }
     }
     
     func selectedImage() -> UIImage{
         switch self{
         case .tableView:
-            return UIImage(named: "icons8-notification-50")!
+            return UIImage(named: "notification-2")!
         case .collectionView:
-            return UIImage(named: "icons8-home-50")!
+            return UIImage(named: "home-2")!
         }
     }
     
@@ -50,12 +50,9 @@ class BaseTabBarController: UITabBarController{
             return [.tableView,.collectionView]
         }
     }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupTabBar()
-        
     }
     
     func setupTabBar(){

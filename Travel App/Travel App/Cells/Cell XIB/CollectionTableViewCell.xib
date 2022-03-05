@@ -48,10 +48,10 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="imageView" destination="qks-OS-juh" id="XjN-7C-OhG"/>
-                <outlet property="likedLabel" destination="1au-o3-VcV" id="RAb-zM-17w"/>
-                <outlet property="minuteLabel" destination="OIE-JO-nEx" id="Pfc-0J-Yot"/>
+                <outlet property="explanationLabel" destination="1au-o3-VcV" id="fHg-VG-1xZ"/>
                 <outlet property="nameLabel" destination="dXr-Gc-rxZ" id="7eU-8f-hnh"/>
+                <outlet property="profileImage" destination="qks-OS-juh" id="ZNY-nr-r96"/>
+                <outlet property="timeLabel" destination="OIE-JO-nEx" id="Oi0-wX-ZIg"/>
             </connections>
             <point key="canvasLocation" x="86.956521739130437" y="153.01339285714286"/>
         </tableViewCell>

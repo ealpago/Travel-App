@@ -45,9 +45,9 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="explanationLabel" destination="ioe-18-NGY" id="GH4-dO-0hN"/>
                 <outlet property="nameLabel" destination="gB8-nI-FeD" id="cMr-hm-teI"/>
                 <outlet property="profileImage" destination="rUu-pC-rpj" id="8sN-zb-5Ti"/>
-                <outlet property="startedLabel" destination="ioe-18-NGY" id="OQe-9A-08q"/>
                 <outlet property="timeLabel" destination="bFR-aI-yLn" id="WHH-5f-5F4"/>
             </connections>
             <point key="canvasLocation" x="180.43478260869566" y="132.25446428571428"/>

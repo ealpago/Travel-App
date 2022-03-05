@@ -57,11 +57,11 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="commentLabel" destination="1cP-iq-ofP" id="xLE-We-9Dl"/>
-                <outlet property="daysLabel" destination="rKG-TA-RSh" id="Fi3-VF-3Wp"/>
-                <outlet property="leaveCommentLabel" destination="XeF-xe-RLS" id="Xob-Zl-p1u"/>
+                <outlet property="explanationLabel" destination="XeF-xe-RLS" id="hDU-zR-Nj9"/>
                 <outlet property="likedImageLabel" destination="TJY-ma-3VJ" id="tPA-3o-5Oq"/>
                 <outlet property="nameLabel" destination="Ind-ej-G6S" id="rFG-4Z-fjU"/>
                 <outlet property="profileImage" destination="QMx-iA-Vro" id="HS5-hM-zY4"/>
+                <outlet property="timeLabel" destination="rKG-TA-RSh" id="O6s-Fo-bKK"/>
             </connections>
             <point key="canvasLocation" x="158.69565217391306" y="135.26785714285714"/>
         </tableViewCell>

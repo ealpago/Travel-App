@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-struct TableViewSectionModel {
+struct TableViewModel {
     var items:[TableViewItemModel?] = []
 }
 

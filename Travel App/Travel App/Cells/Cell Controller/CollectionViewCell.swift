@@ -34,7 +34,5 @@ class CollectionViewCell: UICollectionViewCell {
     override func awakeFromNib(){
         super.awakeFromNib()
         // Initialization code
-        profileImageView?.layer.cornerRadius = 8.0
-        profileImageView?.clipsToBounds = true
     }
 }

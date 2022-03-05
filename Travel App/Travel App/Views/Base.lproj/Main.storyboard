@@ -16,10 +16,43 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="tiL-W2-03G">
+                                <rect key="frame" x="20" y="88" width="374" height="768"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="3UN-Zx-Pcz">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="32"/>
+                                        <segments>
+                                            <segment title="First"/>
+                                            <segment title="Second"/>
+                                        </segments>
+                                    </segmentedControl>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="owq-vs-jEa">
+                                        <rect key="frame" x="0.0" y="39" width="374" height="729"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </tableView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="owq-vs-jEa" secondAttribute="trailing" id="G1b-i2-VMD"/>
+                                    <constraint firstItem="owq-vs-jEa" firstAttribute="leading" secondItem="tiL-W2-03G" secondAttribute="leading" id="Wn1-n9-wXv"/>
+                                    <constraint firstAttribute="bottom" secondItem="owq-vs-jEa" secondAttribute="bottom" id="wL7-wH-l2G"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tiL-W2-03G" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="gVS-xD-TJp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tiL-W2-03G" secondAttribute="trailing" constant="20" id="lGY-AF-J0r"/>
+                            <constraint firstAttribute="bottom" secondItem="tiL-W2-03G" secondAttribute="bottom" constant="40" id="mPy-UM-rd4"/>
+                            <constraint firstItem="tiL-W2-03G" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ngE-Qy-wbz"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="p7u-kI-JDV"/>
+                    <connections>
+                        <outlet property="segmentControl" destination="3UN-Zx-Pcz" id="Jao-gG-g4l"/>
+                        <outlet property="tableView" destination="owq-vs-jEa" id="y4V-OC-95E"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -34,7 +67,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9WW-BC-aQD">
-                                <rect key="frame" x="20" y="88" width="374" height="774"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nS7-Pe-kPO">
                                     <size key="itemSize" width="374" height="319"/>
@@ -44,7 +77,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="wbK-1K-sxS">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="319"/>
+                                        <rect key="frame" x="20" y="0.0" width="374" height="319"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ICz-MG-5LO">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="319"/>
@@ -58,10 +91,10 @@
                         <viewLayoutGuide key="safeArea" id="rSc-Vn-znC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="9WW-BC-aQD" firstAttribute="leading" secondItem="rSc-Vn-znC" secondAttribute="leading" constant="20" id="73I-w7-Wvp"/>
-                            <constraint firstItem="rSc-Vn-znC" firstAttribute="trailing" secondItem="9WW-BC-aQD" secondAttribute="trailing" constant="20" id="AMf-W5-bGU"/>
-                            <constraint firstItem="9WW-BC-aQD" firstAttribute="bottom" secondItem="rSc-Vn-znC" secondAttribute="bottom" id="ftY-U5-H54"/>
-                            <constraint firstItem="9WW-BC-aQD" firstAttribute="top" secondItem="rSc-Vn-znC" secondAttribute="top" id="jmh-eF-H6n"/>
+                            <constraint firstItem="9WW-BC-aQD" firstAttribute="bottom" secondItem="rSc-Vn-znC" secondAttribute="bottom" id="Hkh-Q6-RoJ"/>
+                            <constraint firstItem="9WW-BC-aQD" firstAttribute="leading" secondItem="rSc-Vn-znC" secondAttribute="leading" id="iwI-FC-0M2"/>
+                            <constraint firstItem="rSc-Vn-znC" firstAttribute="trailing" secondItem="9WW-BC-aQD" secondAttribute="trailing" id="vTe-86-TRb"/>
+                            <constraint firstItem="9WW-BC-aQD" firstAttribute="top" secondItem="rSc-Vn-znC" secondAttribute="top" id="yfV-i0-L5F"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="gLi-Eh-Yyj"/>
