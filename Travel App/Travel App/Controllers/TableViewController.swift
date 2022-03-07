@@ -26,16 +26,17 @@ class TableViewController: UIViewController {
         tableView?.register(UINib(nibName: "CommendTableViewCell", bundle: nil), forCellReuseIdentifier: "CommendTableViewCell")
         tableView?.register(UINib(nibName: "FollowTableViewCell", bundle: nil), forCellReuseIdentifier: "FollowTableViewCell")
         
-        let commentItems = [TableViewItemModel(cellType: .comment, profileImage: "face1", likedImageView: nil, nameLabel: "Emre Alpago", timeLabel: "1m ago", explanationLabel: "Comment", commentLabel: "Deneme121212121212")]
-        let collectionItems = [TableViewItemModel(cellType: .collection, profileImage: "face2", likedImageView: nil, nameLabel: "Emre Alpago", timeLabel: "2 weeks ago", explanationLabel: "Collection", commentLabel: nil)]
+        let commentItems = [TableViewItemModel(cellType: .comment, profileImage: "face2", likedImageView: "deneme", nameLabel: "Emre Alpago", timeLabel: "1m ago", explanationLabel: "leave you a commentcf", commentLabel: "So you’re going abroad, you’ve chosen your destination and you have to choose a hotel.")]
+        let collectionItems = [TableViewItemModel(cellType: .collection, profileImage: "face1", likedImageView: nil, nameLabel: "Emre Alpago", timeLabel: "2 weeks ago", explanationLabel: "Collection", commentLabel: nil)]
         let followItems = [TableViewItemModel(cellType: .follow, profileImage: "face3", likedImageView: nil, nameLabel: "Emre Alpago", timeLabel: "1 weeks ago", explanationLabel: "Likes", commentLabel: nil)]
 
         
-        cells.append(TableViewModel(items: commentItems))
         cells.append(TableViewModel(items: collectionItems))
         cells.append(TableViewModel(items: followItems))
-        
+        cells.append(TableViewModel(items: commentItems))
+
         navigationItem.title = "Activity"
+        
 //        let items = ["You", "Following"]
 //        let segmentedController = UISegmentedControl(items: items)
 //
@@ -50,7 +51,7 @@ class TableViewController: UIViewController {
 //        ])
     }
 }
-//
+
 extension TableViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return (cells[section].items.count)

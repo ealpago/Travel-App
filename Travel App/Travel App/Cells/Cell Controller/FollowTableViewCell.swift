@@ -22,6 +22,8 @@ class FollowTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        self.profileImage?.layer.masksToBounds = true
+        self.profileImage?.layer.cornerRadius = self.profileImage!.frame.width/2.0
     }
 
     func setupCell(cellModel: TableViewItemModel) {

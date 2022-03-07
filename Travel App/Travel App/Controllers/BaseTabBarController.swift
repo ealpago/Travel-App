@@ -44,7 +44,7 @@ enum TabbarItemType {
 
 
 class BaseTabBarController: UITabBarController{
-
+    
     var items:[TabbarItemType] {
         get {
             return [.tableView,.collectionView]
@@ -59,7 +59,7 @@ class BaseTabBarController: UITabBarController{
         var viewControllers:[UIViewController] = []
         // TODO: Generic storyBoard ViewController al
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-
+        
         items.forEach { item in
             var vc = UIViewController()
             switch item{
@@ -72,8 +72,6 @@ class BaseTabBarController: UITabBarController{
             vc.tabBarItem = tabbarItem
             viewControllers.append(vc)
         }
-        
-        
         
         setViewControllers(viewControllers, animated: true)
         

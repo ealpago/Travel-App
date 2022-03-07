@@ -25,6 +25,9 @@
 		D1961B5F27D0EFF300F59236 /* FollowTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1961B5D27D0EFF300F59236 /* FollowTableViewCell.xib */; };
 		D1961B6227D10EFE00F59236 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1961B6027D10EFE00F59236 /* CollectionViewCell.swift */; };
 		D1961B6327D10EFE00F59236 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1961B6127D10EFE00F59236 /* CollectionViewCell.xib */; };
+		D1E4085727D5FDFA0072402D /* LikedPhotosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E4085527D5FDFA0072402D /* LikedPhotosCollectionViewCell.swift */; };
+		D1E4085827D5FDFA0072402D /* LikedPhotosCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1E4085627D5FDFA0072402D /* LikedPhotosCollectionViewCell.xib */; };
+		D1E4085A27D61B4A0072402D /* LikedCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E4085927D61B4A0072402D /* LikedCollectionViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +51,9 @@
 		D1961B5D27D0EFF300F59236 /* FollowTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FollowTableViewCell.xib; sourceTree = "<group>"; };
 		D1961B6027D10EFE00F59236 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		D1961B6127D10EFE00F59236 /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
+		D1E4085527D5FDFA0072402D /* LikedPhotosCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedPhotosCollectionViewCell.swift; sourceTree = "<group>"; };
+		D1E4085627D5FDFA0072402D /* LikedPhotosCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LikedPhotosCollectionViewCell.xib; sourceTree = "<group>"; };
+		D1E4085927D61B4A0072402D /* LikedCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedCollectionViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +116,7 @@
 				D1961B5927D0EFE500F59236 /* CommendTableViewCell.xib */,
 				D1961B5D27D0EFF300F59236 /* FollowTableViewCell.xib */,
 				D1961B6127D10EFE00F59236 /* CollectionViewCell.xib */,
+				D1E4085627D5FDFA0072402D /* LikedPhotosCollectionViewCell.xib */,
 			);
 			path = "Cell XIB";
 			sourceTree = "<group>";
@@ -121,6 +128,7 @@
 				D1961B5827D0EFE500F59236 /* CommendTableViewCell.swift */,
 				D1961B5C27D0EFF300F59236 /* FollowTableViewCell.swift */,
 				D1961B6027D10EFE00F59236 /* CollectionViewCell.swift */,
+				D1E4085527D5FDFA0072402D /* LikedPhotosCollectionViewCell.swift */,
 			);
 			path = "Cell Controller";
 			sourceTree = "<group>";
@@ -147,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				D18E674B27D237DA00305D9D /* TableViewModel.swift */,
+				D1E4085927D61B4A0072402D /* LikedCollectionViewModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -214,6 +223,7 @@
 				D1961B6327D10EFE00F59236 /* CollectionViewCell.xib in Resources */,
 				D18C2CB427D0DB540046AEDE /* Main.storyboard in Resources */,
 				D18E674327D1EB9700305D9D /* Assets.xcassets in Resources */,
+				D1E4085827D5FDFA0072402D /* LikedPhotosCollectionViewCell.xib in Resources */,
 				D1961B5F27D0EFF300F59236 /* FollowTableViewCell.xib in Resources */,
 				D1961B5727D0EF5100F59236 /* CollectionTableViewCell.xib in Resources */,
 			);
@@ -229,6 +239,7 @@
 				D1961B5A27D0EFE500F59236 /* CommendTableViewCell.swift in Sources */,
 				D18E674C27D237DA00305D9D /* TableViewModel.swift in Sources */,
 				D18C2CB127D0DB540046AEDE /* TableViewController.swift in Sources */,
+				D1E4085727D5FDFA0072402D /* LikedPhotosCollectionViewCell.swift in Sources */,
 				D18C2CAD27D0DB540046AEDE /* AppDelegate.swift in Sources */,
 				D1961B6227D10EFE00F59236 /* CollectionViewCell.swift in Sources */,
 				D178163027D14CF100CB3372 /* CollectionViewController.swift in Sources */,
@@ -236,6 +247,7 @@
 				D18C2CAF27D0DB540046AEDE /* SceneDelegate.swift in Sources */,
 				D1961B5E27D0EFF300F59236 /* FollowTableViewCell.swift in Sources */,
 				D1961B5627D0EF5100F59236 /* CollectionTableViewCell.swift in Sources */,
+				D1E4085A27D61B4A0072402D /* LikedCollectionViewModel.swift in Sources */,
 				D18E675027D2462100305D9D /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
