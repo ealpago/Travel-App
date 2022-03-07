@@ -27,18 +27,21 @@ class CollectionTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         
+        let likedCollectionItems = [LikedCollectionViewItemModel(likedImageView: "deneme"),LikedCollectionViewItemModel(likedImageView: "deneme"),LikedCollectionViewItemModel(likedImageView: "deneme"),LikedCollectionViewItemModel(likedImageView: "deneme"),LikedCollectionViewItemModel(likedImageView: "deneme")]
+        
+        cells.append(LikedCollectionViewModel(items: likedCollectionItems))
+        
         likedCollectionView?.register(LikedPhotosCollectionViewCell.nib(), forCellWithReuseIdentifier: LikedPhotosCollectionViewCell.identifier)
         likedCollectionView?.delegate = self
         likedCollectionView?.dataSource = self
         
         self.profileImage?.layer.masksToBounds = true
         self.profileImage?.layer.cornerRadius = self.profileImage!.frame.width/2.0
-        
-        let likedCollectionItems = [LikedCollectionViewItemModel(likedImageView: "deneme")]
-        
-        cells.append(LikedCollectionViewModel(items: likedCollectionItems))
+       
+        likedCollectionView?.reloadData()
     }
 
+    
     
     func setupCell(cellModel: TableViewItemModel) {
         itemModel = cellModel
@@ -51,9 +54,9 @@ class CollectionTableViewCell: UITableViewCell {
     }
 }
 
-extension CollectionTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension CollectionTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return (cells[section].items.count)
+        return cells[section].items.count
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -66,10 +69,5 @@ extension CollectionTableViewCell: UICollectionViewDelegate, UICollectionViewDat
         cell.setupCell(cellModel: cellModel)
         return cell
     }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 100, height: 100)
-    }
-    
     
 }

@@ -21,6 +21,15 @@ class LikedPhotosCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        self.imageView?.layer.masksToBounds = true
+        self.imageView?.layer.cornerRadius = self.imageView!.frame.width/4.0
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+           layoutIfNeeded()
+        imageView?.layer.cornerRadius = (imageView?.frame.height)!/2
     }
     
     func setupCell(cellModel: LikedCollectionViewItemModel) {
@@ -28,7 +37,6 @@ class LikedPhotosCollectionViewCell: UICollectionViewCell {
         if let itemModel = self.itemModel {
             imageView?.image = UIImage(named: itemModel.likedImageView ?? "")
         }
-        
     }
 
 }

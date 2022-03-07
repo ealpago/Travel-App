@@ -25,6 +25,8 @@ class CommendTableViewCell: UITableViewCell {
         // Initialization code
         self.profileImage?.layer.masksToBounds = true
         self.profileImage?.layer.cornerRadius = self.profileImage!.frame.width/2.0
+        self.likedImageLabel?.layer.masksToBounds = true
+        self.likedImageLabel?.layer.cornerRadius = self.likedImageLabel!.frame.width/4.0
     }
     
     func setupCell(cellModel: TableViewItemModel) {

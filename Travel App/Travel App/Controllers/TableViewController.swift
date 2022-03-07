@@ -28,27 +28,13 @@ class TableViewController: UIViewController {
         
         let commentItems = [TableViewItemModel(cellType: .comment, profileImage: "face2", likedImageView: "deneme", nameLabel: "Emre Alpago", timeLabel: "1m ago", explanationLabel: "leave you a commentcf", commentLabel: "So you’re going abroad, you’ve chosen your destination and you have to choose a hotel.")]
         let collectionItems = [TableViewItemModel(cellType: .collection, profileImage: "face1", likedImageView: nil, nameLabel: "Emre Alpago", timeLabel: "2 weeks ago", explanationLabel: "Collection", commentLabel: nil)]
-        let followItems = [TableViewItemModel(cellType: .follow, profileImage: "face3", likedImageView: nil, nameLabel: "Emre Alpago", timeLabel: "1 weeks ago", explanationLabel: "Likes", commentLabel: nil)]
+        let followItems = [TableViewItemModel(cellType: .follow, profileImage: "face3", likedImageView: nil, nameLabel: "Emre Alpago", timeLabel: "1 weeks ago", explanationLabel: "started following you", commentLabel: nil)]
 
         
         cells.append(TableViewModel(items: collectionItems))
         cells.append(TableViewModel(items: followItems))
         cells.append(TableViewModel(items: commentItems))
 
-        navigationItem.title = "Activity"
-        
-//        let items = ["You", "Following"]
-//        let segmentedController = UISegmentedControl(items: items)
-//
-//        segmentedController.translatesAutoresizingMaskIntoConstraints = false
-//        view.addSubview(segmentedController)
-//
-//        let margins = view.layoutMarginsGuide
-//        NSLayoutConstraint.activate([
-//            segmentedController.leadingAnchor.constraint(equalTo: margins.leadingAnchor),
-//            segmentedController.trailingAnchor.constraint(equalTo: margins.trailingAnchor),
-//            segmentedController.topAnchor.constraint(equalTo: margins.topAnchor)
-//        ])
     }
 }
 
@@ -83,4 +69,5 @@ extension TableViewController: UITableViewDelegate, UITableViewDataSource{
             return UITableViewCell()
         }
     }
+    
 }

@@ -36,6 +36,5 @@ class CollectionViewCell: UICollectionViewCell {
         // Initialization code
         self.profileImageView?.layer.masksToBounds = true
         self.profileImageView?.layer.cornerRadius = self.profileImageView!.frame.width/2.0
-        self.mainImageView?.layer.cornerRadius = self.mainImageView!.frame.width/8.0
     }
 }
