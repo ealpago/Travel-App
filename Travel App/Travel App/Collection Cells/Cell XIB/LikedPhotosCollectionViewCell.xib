@@ -3,39 +3,68 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="LikedPhotosCollectionViewCell" id="gTV-IL-0wX" customClass="LikedPhotosCollectionViewCell" customModule="Travel_App" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+            <rect key="frame" x="0.0" y="0.0" width="60" height="68"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                <rect key="frame" x="0.0" y="0.0" width="60" height="68"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="deneme" translatesAutoresizingMaskIntoConstraints="NO" id="PCi-iP-vNT">
-                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
-                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0jD-TR-8vz">
+                        <rect key="frame" x="0.0" y="0.0" width="60" height="68"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="deneme" translatesAutoresizingMaskIntoConstraints="NO" id="tHt-iG-7dd">
+                                <rect key="frame" x="4" y="17" width="52" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="51" id="8fU-AH-pIK"/>
+                                    <constraint firstAttribute="height" constant="51" id="RXZ-wZ-Uck"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="deneme" translatesAutoresizingMaskIntoConstraints="NO" id="IyL-xi-DFP">
+                                <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="22l-ZF-7hx"/>
+                                    <constraint firstAttribute="width" constant="60" id="s63-jI-n96"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="IyL-xi-DFP" firstAttribute="top" secondItem="0jD-TR-8vz" secondAttribute="top" id="C7s-X9-F41"/>
+                            <constraint firstItem="IyL-xi-DFP" firstAttribute="leading" secondItem="0jD-TR-8vz" secondAttribute="leading" id="GlE-md-hSN"/>
+                            <constraint firstItem="tHt-iG-7dd" firstAttribute="leading" secondItem="IyL-xi-DFP" secondAttribute="leading" constant="4" id="MVS-7M-sCG"/>
+                            <constraint firstAttribute="trailing" secondItem="IyL-xi-DFP" secondAttribute="trailing" id="bJX-8U-0Au"/>
+                            <constraint firstAttribute="bottom" secondItem="IyL-xi-DFP" secondAttribute="bottom" constant="8" id="fh9-JF-sJG"/>
+                            <constraint firstAttribute="bottom" secondItem="tHt-iG-7dd" secondAttribute="bottom" id="hOI-6A-Ssc"/>
+                            <constraint firstItem="tHt-iG-7dd" firstAttribute="trailing" secondItem="IyL-xi-DFP" secondAttribute="trailing" constant="-4" id="lP1-xc-uNt"/>
+                        </constraints>
+                    </view>
                 </subviews>
             </view>
-            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstItem="PCi-iP-vNT" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="MSw-7g-Yrf"/>
-                <constraint firstItem="PCi-iP-vNT" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="TA8-To-abc"/>
-                <constraint firstAttribute="trailing" secondItem="PCi-iP-vNT" secondAttribute="trailing" id="Uex-R0-oZg"/>
-                <constraint firstAttribute="bottom" secondItem="PCi-iP-vNT" secondAttribute="bottom" id="Xcz-wu-ARp"/>
+                <constraint firstItem="0jD-TR-8vz" firstAttribute="bottom" secondItem="gTV-IL-0wX" secondAttribute="bottom" id="RE4-5Y-Vmn"/>
+                <constraint firstAttribute="top" secondItem="0jD-TR-8vz" secondAttribute="top" id="agT-zP-TMa"/>
+                <constraint firstAttribute="leading" secondItem="0jD-TR-8vz" secondAttribute="leading" id="gRZ-Cy-nEw"/>
+                <constraint firstItem="0jD-TR-8vz" firstAttribute="trailing" secondItem="gTV-IL-0wX" secondAttribute="trailing" id="ksK-e7-zfX"/>
             </constraints>
-            <size key="customSize" width="60" height="60"/>
+            <size key="customSize" width="60" height="68"/>
             <connections>
-                <outlet property="imageView" destination="PCi-iP-vNT" id="ciA-7v-4vF"/>
+                <outlet property="bottomImageView" destination="tHt-iG-7dd" id="IxR-Lb-qpI"/>
+                <outlet property="topImageView" destination="IyL-xi-DFP" id="juR-C4-uw5"/>
             </connections>
-            <point key="canvasLocation" x="-231.8840579710145" y="62.946428571428569"/>
+            <point key="canvasLocation" x="-231.8840579710145" y="87.053571428571431"/>
         </collectionViewCell>
     </objects>
     <resources>
         <image name="deneme" width="710" height="444"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

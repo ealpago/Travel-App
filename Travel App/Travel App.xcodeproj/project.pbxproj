@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		D178163027D14CF100CB3372 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D178162F27D14CF100CB3372 /* CollectionViewController.swift */; };
+		D17BB1CB27D788E60059D2D4 /* RedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17BB1CA27D788E60059D2D4 /* RedViewController.swift */; };
+		D17BB1CD27D789060059D2D4 /* PurpleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17BB1CC27D789060059D2D4 /* PurpleViewController.swift */; };
 		D18C2CAD27D0DB540046AEDE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18C2CAC27D0DB540046AEDE /* AppDelegate.swift */; };
 		D18C2CAF27D0DB540046AEDE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18C2CAE27D0DB540046AEDE /* SceneDelegate.swift */; };
 		D18C2CB127D0DB540046AEDE /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18C2CB027D0DB540046AEDE /* TableViewController.swift */; };
@@ -32,6 +34,8 @@
 
 /* Begin PBXFileReference section */
 		D178162F27D14CF100CB3372 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		D17BB1CA27D788E60059D2D4 /* RedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedViewController.swift; sourceTree = "<group>"; };
+		D17BB1CC27D789060059D2D4 /* PurpleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurpleViewController.swift; sourceTree = "<group>"; };
 		D18C2CA927D0DB540046AEDE /* Travel App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Travel App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D18C2CAC27D0DB540046AEDE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D18C2CAE27D0DB540046AEDE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -136,6 +140,8 @@
 				D18C2CB027D0DB540046AEDE /* TableViewController.swift */,
 				D178162F27D14CF100CB3372 /* CollectionViewController.swift */,
 				D18E674D27D23B3100305D9D /* BaseTabBarController.swift */,
+				D17BB1CA27D788E60059D2D4 /* RedViewController.swift */,
+				D17BB1CC27D789060059D2D4 /* PurpleViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -260,7 +266,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D17BB1CB27D788E60059D2D4 /* RedViewController.swift in Sources */,
 				D1961B5A27D0EFE500F59236 /* CommendTableViewCell.swift in Sources */,
+				D17BB1CD27D789060059D2D4 /* PurpleViewController.swift in Sources */,
 				D18E674C27D237DA00305D9D /* TableViewModel.swift in Sources */,
 				D18C2CB127D0DB540046AEDE /* TableViewController.swift in Sources */,
 				D1E4085727D5FDFA0072402D /* LikedPhotosCollectionViewCell.swift in Sources */,

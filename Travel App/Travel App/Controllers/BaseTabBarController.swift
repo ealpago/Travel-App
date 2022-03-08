@@ -12,30 +12,30 @@ enum TabbarItemType {
     case tableView
     case collectionView
     
-    func name() -> String{
-        switch self{
-        case .tableView:
-            return "Home"
-        case .collectionView:
-            return "Collection"
-        }
-    }
+//    func name() -> String{
+//        switch self{
+//        case .tableView:
+//            return "Home"
+//        case .collectionView:
+//            return "Collection"
+//        }
+//    }
     
     func image() -> UIImage{
         switch self{
         case .tableView:
-            return UIImage(named: "notification-2")!
+            return UIImage(named: "notification")!
         case .collectionView:
-            return UIImage(named: "home-2")!
+            return UIImage(named: "home")!
         }
     }
     
     func selectedImage() -> UIImage{
         switch self{
         case .tableView:
-            return UIImage(named: "notification-2")!
+            return UIImage(named: "notification")!
         case .collectionView:
-            return UIImage(named: "home-2")!
+            return UIImage(named: "home")!
         }
     }
     
@@ -68,7 +68,7 @@ class BaseTabBarController: UITabBarController{
             case .collectionView:
                 vc = storyBoard.instantiateViewController(withIdentifier: Constants.shared.collectionViewSotyBoardIdentifier) as! CollectionViewController
             }
-            let tabbarItem = UITabBarItem(title: item.name(), image: item.image(), selectedImage: item.selectedImage())
+            let tabbarItem = UITabBarItem(title: nil, image: item.image(), selectedImage: item.selectedImage())
             vc.tabBarItem = tabbarItem
             viewControllers.append(vc)
         }

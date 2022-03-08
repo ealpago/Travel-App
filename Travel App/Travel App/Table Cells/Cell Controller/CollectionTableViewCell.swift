@@ -27,7 +27,8 @@ class CollectionTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         
-        let likedCollectionItems = [LikedCollectionViewItemModel(likedImageView: "deneme"),LikedCollectionViewItemModel(likedImageView: "deneme"),LikedCollectionViewItemModel(likedImageView: "deneme"),LikedCollectionViewItemModel(likedImageView: "deneme"),LikedCollectionViewItemModel(likedImageView: "deneme")]
+        var likedCollectionItems = [LikedCollectionViewItemModel(likedImageView: "deneme"),LikedCollectionViewItemModel(likedImageView: "deneme"),LikedCollectionViewItemModel(likedImageView: "deneme"),LikedCollectionViewItemModel(likedImageView: "deneme"),LikedCollectionViewItemModel(likedImageView: "deneme"),LikedCollectionViewItemModel(likedImageView: "deneme"),LikedCollectionViewItemModel(likedImageView: "deneme"),LikedCollectionViewItemModel(likedImageView: "deneme"),LikedCollectionViewItemModel(likedImageView: "deneme"),LikedCollectionViewItemModel(likedImageView: "deneme")]
+        
         
         cells.append(LikedCollectionViewModel(items: likedCollectionItems))
         
@@ -39,6 +40,9 @@ class CollectionTableViewCell: UITableViewCell {
         self.profileImage?.layer.cornerRadius = self.profileImage!.frame.width/2.0
        
         likedCollectionView?.reloadData()
+        self.nameLabel?.textColor = Constants.shared.nameLabelColor
+        self.explanationLabel?.textColor = Constants.shared.explanationLabelColor
+        self.timeLabel?.textColor = Constants.shared.timeLabelColor
     }
 
     
@@ -54,7 +58,7 @@ class CollectionTableViewCell: UITableViewCell {
     }
 }
 
-extension CollectionTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
+extension CollectionTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return cells[section].items.count
     }
@@ -67,7 +71,13 @@ extension CollectionTableViewCell: UICollectionViewDelegate, UICollectionViewDat
         let cell = likedCollectionView?.dequeueReusableCell(withReuseIdentifier: LikedPhotosCollectionViewCell.identifier, for: indexPath) as! LikedPhotosCollectionViewCell
         let cellModel = cells[indexPath.section].items[indexPath.row]!
         cell.setupCell(cellModel: cellModel)
+        cell.topImageView?.layer.cornerRadius = cell.frame.size.height/6
+        cell.bottomImageView?.layer.cornerRadius = cell.frame.size.height/6
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let size = (collectionView.frame.size.width-150)/3
+        return CGSize(width: size, height: size)
+    }
 }

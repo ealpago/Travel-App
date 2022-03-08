@@ -10,6 +10,7 @@ import UIKit
 class TableViewController: UIViewController {
     
     
+    @IBOutlet var activityLabel: UILabel!
     @IBOutlet var tableView: UITableView?
     @IBOutlet var segmentControl: UISegmentedControl?
     
@@ -20,18 +21,25 @@ class TableViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        activityLabel.textColor = Constants.shared.nameLabelColor
+        
         tableView?.delegate = self
         tableView?.dataSource = self
         tableView?.register(UINib(nibName: "CollectionTableViewCell", bundle: nil), forCellReuseIdentifier: "CollectionTableViewCell")
         tableView?.register(UINib(nibName: "CommendTableViewCell", bundle: nil), forCellReuseIdentifier: "CommendTableViewCell")
         tableView?.register(UINib(nibName: "FollowTableViewCell", bundle: nil), forCellReuseIdentifier: "FollowTableViewCell")
         
-        let commentItems = [TableViewItemModel(cellType: .comment, profileImage: "face2", likedImageView: "deneme", nameLabel: "Emre Alpago", timeLabel: "1m ago", explanationLabel: "leave you a commentcf", commentLabel: "So you’re going abroad, you’ve chosen your destination and you have to choose a hotel.")]
-        let collectionItems = [TableViewItemModel(cellType: .collection, profileImage: "face1", likedImageView: nil, nameLabel: "Emre Alpago", timeLabel: "2 weeks ago", explanationLabel: "Collection", commentLabel: nil)]
-        let followItems = [TableViewItemModel(cellType: .follow, profileImage: "face3", likedImageView: nil, nameLabel: "Emre Alpago", timeLabel: "1 weeks ago", explanationLabel: "started following you", commentLabel: nil)]
-
+        let collectionItems = [TableViewItemModel(cellType: .collection, profileImage: "face1", likedImageView: nil, nameLabel: "Cecilia McGee", timeLabel: "10min ago", explanationLabel: "liked 4 your photos", commentLabel: nil)]
         
-        cells.append(TableViewModel(items: collectionItems))
+        
+        let followItems = [TableViewItemModel(cellType: .follow, profileImage: "face3", likedImageView: nil, nameLabel: "Jennie Dean", timeLabel: "1h ago", explanationLabel: "started following you", commentLabel: nil)]
+        
+        let commentItems = [TableViewItemModel(cellType: .comment, profileImage: "face2", likedImageView: "deneme", nameLabel: "Isaiah Bryan", timeLabel: "2 days ago", explanationLabel: "leave you a comment:", commentLabel: "So you’re going abroad, you’ve chosen your destination and you have to choose a hotel.")]
+        
+        for i in 1...30{
+            cells.append(TableViewModel(items: collectionItems))
+        }
+        
         cells.append(TableViewModel(items: followItems))
         cells.append(TableViewModel(items: commentItems))
 

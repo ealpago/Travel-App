@@ -26,7 +26,11 @@ class CommendTableViewCell: UITableViewCell {
         self.profileImage?.layer.masksToBounds = true
         self.profileImage?.layer.cornerRadius = self.profileImage!.frame.width/2.0
         self.likedImageLabel?.layer.masksToBounds = true
-        self.likedImageLabel?.layer.cornerRadius = self.likedImageLabel!.frame.width/4.0
+        self.likedImageLabel?.layer.cornerRadius = self.likedImageLabel!.frame.width/6.0
+        self.nameLabel?.textColor = Constants.shared.nameLabelColor
+        self.explanationLabel?.textColor = Constants.shared.explanationLabelColor
+        self.timeLabel?.textColor = Constants.shared.timeLabelColor
+        self.commentLabel?.textColor = Constants.shared.commentLabelColor
     }
     
     func setupCell(cellModel: TableViewItemModel) {
