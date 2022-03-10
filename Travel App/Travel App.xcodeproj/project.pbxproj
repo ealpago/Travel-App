@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D15AB64227DA12B4006D1E91 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15AB64127DA12B4006D1E91 /* NetworkService.swift */; };
+		D15AB64427DA29E8006D1E91 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15AB64327DA29E8006D1E91 /* APIResponse.swift */; };
+		D15AB64627DA2CC6006D1E91 /* AllResultsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15AB64527DA2CC6006D1E91 /* AllResultsData.swift */; };
 		D178163027D14CF100CB3372 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D178162F27D14CF100CB3372 /* CollectionViewController.swift */; };
 		D17BB1CB27D788E60059D2D4 /* RedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17BB1CA27D788E60059D2D4 /* RedViewController.swift */; };
 		D17BB1CD27D789060059D2D4 /* PurpleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17BB1CC27D789060059D2D4 /* PurpleViewController.swift */; };
@@ -33,6 +36,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D15AB64127DA12B4006D1E91 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		D15AB64327DA29E8006D1E91 /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
+		D15AB64527DA2CC6006D1E91 /* AllResultsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllResultsData.swift; sourceTree = "<group>"; };
 		D178162F27D14CF100CB3372 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		D17BB1CA27D788E60059D2D4 /* RedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedViewController.swift; sourceTree = "<group>"; };
 		D17BB1CC27D789060059D2D4 /* PurpleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurpleViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +77,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D15AB64027DA1247006D1E91 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D15AB64127DA12B4006D1E91 /* NetworkService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		D178163127D1546700CB3372 /* Table Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +113,7 @@
 		D18C2CAB27D0DB540046AEDE /* Travel App */ = {
 			isa = PBXGroup;
 			children = (
+				D15AB64027DA1247006D1E91 /* Services */,
 				D18E674A27D237C200305D9D /* Models */,
 				D18E674927D2329E00305D9D /* Views */,
 				D18E674827D2327100305D9D /* Controllers */,
@@ -159,6 +174,8 @@
 			children = (
 				D18E674B27D237DA00305D9D /* TableViewModel.swift */,
 				D1E4085927D61B4A0072402D /* LikedCollectionViewModel.swift */,
+				D15AB64327DA29E8006D1E91 /* APIResponse.swift */,
+				D15AB64527DA2CC6006D1E91 /* AllResultsData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -271,11 +288,14 @@
 				D17BB1CD27D789060059D2D4 /* PurpleViewController.swift in Sources */,
 				D18E674C27D237DA00305D9D /* TableViewModel.swift in Sources */,
 				D18C2CB127D0DB540046AEDE /* TableViewController.swift in Sources */,
+				D15AB64427DA29E8006D1E91 /* APIResponse.swift in Sources */,
+				D15AB64627DA2CC6006D1E91 /* AllResultsData.swift in Sources */,
 				D1E4085727D5FDFA0072402D /* LikedPhotosCollectionViewCell.swift in Sources */,
 				D18C2CAD27D0DB540046AEDE /* AppDelegate.swift in Sources */,
 				D1961B6227D10EFE00F59236 /* CollectionViewCell.swift in Sources */,
 				D178163027D14CF100CB3372 /* CollectionViewController.swift in Sources */,
 				D18E674E27D23B3200305D9D /* BaseTabBarController.swift in Sources */,
+				D15AB64227DA12B4006D1E91 /* NetworkService.swift in Sources */,
 				D18C2CAF27D0DB540046AEDE /* SceneDelegate.swift in Sources */,
 				D1961B5E27D0EFF300F59236 /* FollowTableViewCell.swift in Sources */,
 				D1961B5627D0EF5100F59236 /* CollectionTableViewCell.swift in Sources */,

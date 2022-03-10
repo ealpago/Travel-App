@@ -30,7 +30,7 @@
                                         </constraints>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="ZB6-Z6-JBM" firstAttribute="top" secondItem="QE1-x5-XHU" secondAttribute="top" id="1wO-Br-vgm"/>
                                     <constraint firstItem="ZB6-Z6-JBM" firstAttribute="leading" secondItem="QE1-x5-XHU" secondAttribute="leading" id="TOb-Vi-YnC"/>
@@ -70,7 +70,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="150" id="2SA-ly-HdM"/>
                                                     <constraint firstItem="luz-Wy-ocP" firstAttribute="top" secondItem="4y2-eZ-JzH" secondAttribute="top" id="Hbh-61-phf"/>
@@ -82,7 +82,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CoP-R6-9XO">
                                         <rect key="frame" x="0.0" y="50" width="306" height="70"/>
                                         <subviews>
-                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="fA5-hz-aHC">
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="fA5-hz-aHC">
                                                 <rect key="frame" x="0.0" y="5" width="306" height="60"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
@@ -96,7 +96,7 @@
                                                 </collectionViewFlowLayout>
                                             </collectionView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="fA5-hz-aHC" firstAttribute="leading" secondItem="CoP-R6-9XO" secondAttribute="leading" id="J31-uA-tcp"/>
                                             <constraint firstAttribute="bottom" secondItem="fA5-hz-aHC" secondAttribute="bottom" constant="5" id="ceE-1h-a3n"/>
