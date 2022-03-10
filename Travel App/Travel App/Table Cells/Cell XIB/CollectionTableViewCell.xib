@@ -86,7 +86,7 @@
                                                 <rect key="frame" x="0.0" y="5" width="306" height="60"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="60" id="IqZ-pO-xPr"/>
+                                                    <constraint firstAttribute="height" constant="60" id="IqZ-pO-xPr" userLabel="height = 70"/>
                                                 </constraints>
                                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nbx-Db-AaB">
                                                     <size key="itemSize" width="128" height="128"/>
