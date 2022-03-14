@@ -16,6 +16,8 @@ class TableViewController: UIViewController {
     
     
     var cells:[TableViewModel] = []
+    //dynamic cell için
+    var imageArray = [Results]()
     
     let tabBarVC = UITabBarController()
     override func viewDidLoad() {
@@ -42,8 +44,17 @@ class TableViewController: UIViewController {
         cells.append(TableViewModel(items: collectionItems))
         cells.append(TableViewModel(items: followItems))
         cells.append(TableViewModel(items: commentItems))
-
+        
+        managingData(query: "nature")
     }
+    
+ 
+    func managingData(query:String){
+        NetworkManager.service.request(requestRoute: .query(query: query), responseModel: UnsplashResponse.self) { [self] details in
+           imageArray = details.results ?? []
+        }
+    }
+    
 }
 
 extension TableViewController: UITableViewDelegate, UITableViewDataSource{

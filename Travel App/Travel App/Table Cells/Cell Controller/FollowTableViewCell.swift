@@ -16,6 +16,7 @@ class FollowTableViewCell: UITableViewCell {
     @IBOutlet var explanationLabel: UILabel?
     @IBOutlet var timeLabel: UILabel?
     private var itemModel: TableViewItemModel?
+    private var resultModel: Results?
 
     
 
@@ -39,4 +40,14 @@ class FollowTableViewCell: UITableViewCell {
             timeLabel?.text = itemModel.timeLabel
         }
     }
+    
+//    func setupCell(cellModel: Results){
+//        resultModel = cellModel
+//        if let resultModel = self.resultModel{
+//            profileImage?.downloaded(from: resultModel.user?.profile_image?.large ?? "")
+//            nameLabel?.text = resultModel.user?.name
+//            explanationLabel?.text = CellsStringConstants.shared.followExplanation
+//            timeLabel?.text = CellsStringConstants.shared.followTime
+//        }
+//    }
 }

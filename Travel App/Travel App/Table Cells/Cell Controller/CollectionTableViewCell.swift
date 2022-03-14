@@ -12,7 +12,7 @@ class CollectionTableViewCell: UITableViewCell {
     static let identifier = "CollectionTableViewCell"
     
     var cells:[LikedCollectionViewModel] = []
-
+    var collectionCells = [Results]()
    
     @IBOutlet var profileImage: UIImageView?
     @IBOutlet var nameLabel: UILabel?
@@ -20,6 +20,8 @@ class CollectionTableViewCell: UITableViewCell {
     @IBOutlet var timeLabel: UILabel?
     @IBOutlet var likedCollectionView: UICollectionView?
     private var itemModel: TableViewItemModel?
+    private var resultModel: Results?
+
 
     
     
@@ -27,7 +29,7 @@ class CollectionTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         
-        var likedCollectionItems = [LikedCollectionViewItemModel(likedImageView: "deneme"),LikedCollectionViewItemModel(likedImageView: "deneme"),LikedCollectionViewItemModel(likedImageView: "deneme"),LikedCollectionViewItemModel(likedImageView: "deneme"),LikedCollectionViewItemModel(likedImageView: "deneme"),LikedCollectionViewItemModel(likedImageView: "deneme"),LikedCollectionViewItemModel(likedImageView: "deneme"),LikedCollectionViewItemModel(likedImageView: "deneme"),LikedCollectionViewItemModel(likedImageView: "deneme"),LikedCollectionViewItemModel(likedImageView: "deneme")]
+        let likedCollectionItems = [LikedCollectionViewItemModel(likedImageView: "deneme"),LikedCollectionViewItemModel(likedImageView: "deneme"),LikedCollectionViewItemModel(likedImageView: "deneme"),LikedCollectionViewItemModel(likedImageView: "deneme"),LikedCollectionViewItemModel(likedImageView: "deneme"),LikedCollectionViewItemModel(likedImageView: "deneme"),LikedCollectionViewItemModel(likedImageView: "deneme"),LikedCollectionViewItemModel(likedImageView: "deneme"),LikedCollectionViewItemModel(likedImageView: "deneme"),LikedCollectionViewItemModel(likedImageView: "deneme")]
         
         
         cells.append(LikedCollectionViewModel(items: likedCollectionItems))
@@ -56,6 +58,16 @@ class CollectionTableViewCell: UITableViewCell {
             timeLabel?.text = itemModel.timeLabel
         }
     }
+    
+//    func setupCell(cellModel: Results){
+//        resultModel = cellModel
+//        if let resultModel = self.resultModel{
+//            profileImage?.downloaded(from: resultModel.user?.profile_image?.large ?? "")
+//            nameLabel?.text = resultModel.user?.name
+//            explanationLabel?.text = CellsStringConstants.shared.likeExplanation
+//            timeLabel?.text = CellsStringConstants.shared.likeTime
+//        }
+//    }
 }
 
 extension CollectionTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {

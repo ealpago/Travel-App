@@ -23,11 +23,10 @@ class Results:Codable{
     var likes:Int?
     var liked_by_user:Bool?
     var sponsorship:Sponsorships?
-    var topic_submissions:TopicSubmissions?
     var user:User?
     var tags:[Tags]?
     
-    init(id:String?,created_at:String?,updated_at:String?,promoted_at:String?,width:Int?,height:Int?,color:String?,blur_hash:String?,description:String?,alt_description:String?,urls:URLS?,links:Links?,likes:Int?,liked_by_user:Bool?,sponsorship:Sponsorships?,topic_submissions:TopicSubmissions?,user:User?,tags:[Tags]?) {
+    init(id:String?,created_at:String?,updated_at:String?,promoted_at:String?,width:Int?,height:Int?,color:String?,blur_hash:String?,description:String?,alt_description:String?,urls:URLS?,links:Links?,likes:Int?,liked_by_user:Bool?,sponsorship:Sponsorships?,user:User?,tags:[Tags]?) {
         self.id = id
         self.created_at = created_at
         self.updated_at = updated_at
@@ -43,7 +42,6 @@ class Results:Codable{
         self.likes = likes
         self.liked_by_user = liked_by_user
         self.sponsorship = sponsorship
-        self.topic_submissions = topic_submissions
         self.user = user
         self.tags = tags
     }

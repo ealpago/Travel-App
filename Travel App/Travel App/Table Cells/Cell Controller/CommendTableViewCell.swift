@@ -19,6 +19,7 @@ class CommendTableViewCell: UITableViewCell {
     @IBOutlet var topImageView: UIImageView?
     @IBOutlet var bottomImageView: UIImageView?
     private var itemModel: TableViewItemModel?
+    private var resultModel: Results?
     
 
     override func awakeFromNib() {
@@ -48,6 +49,19 @@ class CommendTableViewCell: UITableViewCell {
             bottomImageView?.image = UIImage(named: itemModel.likedImageView ?? "")
         }
     }
+    
+//    func setupCell(cellModel: Results){
+//        resultModel = cellModel
+//        if let resultModel = self.resultModel {
+//            profileImage?.downloaded(from: resultModel.user?.profile_image?.large ?? "")
+//            nameLabel?.text = resultModel.user?.name
+//            explanationLabel?.text = CellsStringConstants.shared.commentExplanation
+//            commentLabel?.text = resultModel.tags?[0].source?.description
+//            timeLabel?.text = CellsStringConstants.shared.commentTime
+//            topImageView?.downloaded(from: resultModel.urls?.thumb ?? "")
+//            bottomImageView?.downloaded(from: resultModel.urls?.thumb ?? "")
+//        }
+//    }
     
     
 }
