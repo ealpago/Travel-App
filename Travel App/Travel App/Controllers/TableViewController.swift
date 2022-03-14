@@ -21,7 +21,7 @@ class TableViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        activityLabel.textColor = Constants.shared.nameLabelColor
+        activityLabel.textColor = ColorConstants.shared.nameLabelColor
         
         tableView?.delegate = self
         tableView?.dataSource = self
@@ -36,10 +36,10 @@ class TableViewController: UIViewController {
         
         let commentItems = [TableViewItemModel(cellType: .comment, profileImage: "face2", likedImageView: "deneme", nameLabel: "Isaiah Bryan", timeLabel: "2 days ago", explanationLabel: "leave you a comment:", commentLabel: "So you’re going abroad, you’ve chosen your destination and you have to choose a hotel.So you’re going abroad, you’ve chosen your destination and you have to choose a hotel.So you’re going abroad, you’ve chosen your destination and you have to choose a hotel.So you’re going abroad, you’ve chosen your destination and you have to choose a hotel.So you’re going abroad, you’ve chosen your destination and you have to choose a hotel.")]
         
-        for i in 1...30{
-            cells.append(TableViewModel(items: collectionItems))
-        }
-        
+//        for i in 1...30{
+//
+//        }
+        cells.append(TableViewModel(items: collectionItems))
         cells.append(TableViewModel(items: followItems))
         cells.append(TableViewModel(items: commentItems))
 

@@ -64,9 +64,9 @@ class BaseTabBarController: UITabBarController{
             var vc = UIViewController()
             switch item{
             case .tableView:
-                vc = storyBoard.instantiateViewController(withIdentifier: Constants.shared.tableViewStoryBoardIdentifier) as! TableViewController
+                vc = storyBoard.instantiateViewController(withIdentifier: IdentifierConstants.shared.tableViewStoryBoardIdentifier) as! TableViewController
             case .collectionView:
-                vc = storyBoard.instantiateViewController(withIdentifier: Constants.shared.collectionViewSotyBoardIdentifier) as! CollectionViewController
+                vc = storyBoard.instantiateViewController(withIdentifier: IdentifierConstants.shared.collectionViewSotyBoardIdentifier) as! CollectionViewController
             }
             let tabbarItem = UITabBarItem(title: nil, image: item.image(), selectedImage: item.selectedImage())
             vc.tabBarItem = tabbarItem

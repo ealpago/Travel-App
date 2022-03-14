@@ -121,10 +121,10 @@
             </objects>
             <point key="canvasLocation" x="961" y="161"/>
         </scene>
-        <!--View Controller-->
+        <!--Brown View Controller-->
         <scene sceneID="IN8-Rc-XC0">
             <objects>
-                <viewController id="xAf-Qh-aMA" sceneMemberID="viewController">
+                <viewController id="xAf-Qh-aMA" customClass="BrownViewController" customModule="Travel_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IWb-TJ-bba">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

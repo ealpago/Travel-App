@@ -40,9 +40,9 @@ class CollectionTableViewCell: UITableViewCell {
         self.profileImage?.layer.cornerRadius = self.profileImage!.frame.width/2.0
        
         likedCollectionView?.reloadData()
-        self.nameLabel?.textColor = Constants.shared.nameLabelColor
-        self.explanationLabel?.textColor = Constants.shared.explanationLabelColor
-        self.timeLabel?.textColor = Constants.shared.timeLabelColor
+        self.nameLabel?.textColor = ColorConstants.shared.nameLabelColor
+        self.explanationLabel?.textColor = ColorConstants.shared.explanationLabelColor
+        self.timeLabel?.textColor = ColorConstants.shared.timeLabelColor
     }
 
     

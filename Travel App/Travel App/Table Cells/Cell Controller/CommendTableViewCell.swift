@@ -30,10 +30,10 @@ class CommendTableViewCell: UITableViewCell {
         self.topImageView?.layer.cornerRadius = self.topImageView!.frame.width/6.0
         self.bottomImageView?.layer.masksToBounds = true
         self.bottomImageView?.layer.cornerRadius = self.bottomImageView!.frame.width/6.0
-        self.nameLabel?.textColor = Constants.shared.nameLabelColor
-        self.explanationLabel?.textColor = Constants.shared.explanationLabelColor
-        self.timeLabel?.textColor = Constants.shared.timeLabelColor
-        self.commentLabel?.textColor = Constants.shared.commentLabelColor
+        self.nameLabel?.textColor = ColorConstants.shared.nameLabelColor
+        self.explanationLabel?.textColor = ColorConstants.shared.explanationLabelColor
+        self.timeLabel?.textColor = ColorConstants.shared.timeLabelColor
+        self.commentLabel?.textColor = ColorConstants.shared.commentLabelColor
     }
     
     func setupCell(cellModel: TableViewItemModel) {
