@@ -66,7 +66,6 @@ class TableViewController: UIViewController {
                 followArray.append(followModel)
             }
     
-    
             self.cells.append(TableViewModel(items: collectionArray))
             self.cells.append(TableViewModel(items: commentArray))
             self.cells.append(TableViewModel(items: followArray))
