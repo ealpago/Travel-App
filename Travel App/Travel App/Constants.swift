@@ -34,7 +34,7 @@ struct APIConstants{
 struct CellsStringConstants{
     static let shared = CellsStringConstants()
     
-    let likeExplanation = "liked 4 your photos"
+    let likeExplanation = "liked 11 your photos"
     let followExplanation = "started following you"
     let commentExplanation = "leave you a comment:"
     

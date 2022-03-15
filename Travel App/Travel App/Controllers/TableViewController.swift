@@ -14,7 +14,6 @@ class TableViewController: UIViewController {
     @IBOutlet var segmentControl: UISegmentedControl?
     
     var cells:[TableViewModel] = []
-    var imageArray = [Results]()
     
     let tabBarVC = UITabBarController()
     
@@ -28,7 +27,6 @@ class TableViewController: UIViewController {
         tableView?.register(UINib(nibName: "CollectionTableViewCell", bundle: nil), forCellReuseIdentifier: "CollectionTableViewCell")
         tableView?.register(UINib(nibName: "CommendTableViewCell", bundle: nil), forCellReuseIdentifier: "CommendTableViewCell")
         tableView?.register(UINib(nibName: "FollowTableViewCell", bundle: nil), forCellReuseIdentifier: "FollowTableViewCell")
-        
         
         managingData(query: "nature")
     }
@@ -68,7 +66,7 @@ class TableViewController: UIViewController {
 
 extension TableViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (cells[section].items.count)
+        return cells[section].items.count
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -76,26 +74,26 @@ extension TableViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let itemModel = cells[indexPath.section].items[indexPath.row]
-        switch itemModel?.cellType {
-        case .comment:
-            let cell = tableView.dequeueReusableCell(withIdentifier: CommendTableViewCell.identifier, for: indexPath) as! CommendTableViewCell
-            let cellModel = cells[indexPath.section].items[indexPath.row]!
-            cell.setupCell(cellModel: cellModel)
-            return cell
-        case .collection:
-            let cell = tableView.dequeueReusableCell(withIdentifier: CollectionTableViewCell.identifier, for: indexPath) as! CollectionTableViewCell
-            let cellModel = cells[indexPath.section].items[indexPath.row]!
-            cell.setupCell(cellModel: cellModel)
-            return cell
-        case .follow:
-            let cell = tableView.dequeueReusableCell(withIdentifier: FollowTableViewCell.identifier, for: indexPath) as! FollowTableViewCell
-            let cellModel = cells[indexPath.section].items[indexPath.row]!
-            cell.setupCell(cellModel: cellModel)
-            return cell
-        case .none:
-            return UITableViewCell()
-        }
+                let itemModel = cells[indexPath.section].items[indexPath.row]
+                switch itemModel?.cellType {
+                case .comment:
+                    let cell = tableView.dequeueReusableCell(withIdentifier: CommendTableViewCell.identifier, for: indexPath) as! CommendTableViewCell
+                    let cellModel = cells[indexPath.section].items[indexPath.row]!
+                    cell.setupCell(cellModel: cellModel)
+                    return cell
+                case .collection:
+                    let cell = tableView.dequeueReusableCell(withIdentifier: CollectionTableViewCell.identifier, for: indexPath) as! CollectionTableViewCell
+                    let cellModel = cells[indexPath.section].items[indexPath.row]!
+                    cell.setupCell(cellModel: cellModel)
+                    return cell
+                case .follow:
+                    let cell = tableView.dequeueReusableCell(withIdentifier: FollowTableViewCell.identifier, for: indexPath) as! FollowTableViewCell
+                    let cellModel = cells[indexPath.section].items[indexPath.row]!
+                    cell.setupCell(cellModel: cellModel)
+                    return cell
+                case .none:
+                    return UITableViewCell()
+                }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
