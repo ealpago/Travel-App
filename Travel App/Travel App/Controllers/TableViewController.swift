@@ -40,7 +40,7 @@ class TableViewController: UIViewController {
         tableView?.register(UINib(nibName: "CommendTableViewCell", bundle: nil), forCellReuseIdentifier: "CommendTableViewCell")
         tableView?.register(UINib(nibName: "FollowTableViewCell", bundle: nil), forCellReuseIdentifier: "FollowTableViewCell")
         
-
+        
         managingData(query: "nature")
     }
     
@@ -65,7 +65,7 @@ class TableViewController: UIViewController {
                 let followModel = TableViewItemModel(cellType: .follow, profileImage: item.user?.profile_image?.large , likedImageView: nil, nameLabel: item.user?.name, timeLabel: CellsStringConstants.shared.followTime, explanationLabel: CellsStringConstants.shared.followExplanation, commentLabel: nil)
                 followArray.append(followModel)
             }
-    
+            
             self.cells.append(TableViewModel(items: collectionArray))
             self.cells.append(TableViewModel(items: commentArray))
             self.cells.append(TableViewModel(items: followArray))
@@ -73,9 +73,6 @@ class TableViewController: UIViewController {
             DispatchQueue.main.async {
                 self.tableView?.reloadData()
             }
-
-       
-            
         }
     }
 }

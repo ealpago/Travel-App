@@ -12,7 +12,6 @@ class LikedPhotosCollectionViewCell: UICollectionViewCell {
     @IBOutlet var topImageView: UIImageView?
     @IBOutlet var bottomImageView: UIImageView?
     private var itemModel: LikedCollectionViewItemModel?
-    private var resultModel: Results?
     
     static let identifier = "LikedPhotosCollectionViewCell"
     
@@ -35,13 +34,5 @@ class LikedPhotosCollectionViewCell: UICollectionViewCell {
         }
         
     }
-    
-//    func setupCell(cellModel: Results){
-//        resultModel = cellModel
-//        if let resultModel = self.resultModel{
-//            topImageView?.downloaded(from: resultModel.urls?.thumb ?? "")
-//            bottomImageView?.downloaded(from: resultModel.urls?.thumb ?? "")
-//        }
-//    }
-    
+
 }

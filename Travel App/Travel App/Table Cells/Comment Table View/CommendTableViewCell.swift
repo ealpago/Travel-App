@@ -47,7 +47,6 @@ class CommendTableViewCell: UITableViewCell {
                 self.topImageView?.downloaded(from: topImageUrl)
                 self.bottomImageView?.downloaded(from: topImageUrl)
             }
-            profileImage?.image = UIImage(named: itemModel.profileImage ?? "")
             nameLabel?.text = itemModel.nameLabel
             explanationLabel?.text = itemModel.explanationLabel
             commentLabel?.text = itemModel.commentLabel
