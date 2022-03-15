@@ -204,8 +204,16 @@
 		D18E674A27D237C200305D9D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D199379827E07201009C3C26 /* Response Models */,
 				D18E674B27D237DA00305D9D /* TableViewModel.swift */,
 				D1E4085927D61B4A0072402D /* LikedCollectionViewModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D199379827E07201009C3C26 /* Response Models */ = {
+			isa = PBXGroup;
+			children = (
 				D1BF95AC27DB396100A2F4ED /* UnsplashResponse.swift */,
 				D18389CD27DF231E000AB354 /* Results.swift */,
 				D18389CF27DF23AB000AB354 /* URLS.swift */,
@@ -218,7 +226,7 @@
 				D18389E327DF2F67000AB354 /* Tags.swift */,
 				D18389E827DF77C6000AB354 /* Source.swift */,
 			);
-			path = Models;
+			path = "Response Models";
 			sourceTree = "<group>";
 		};
 		D1E4085B27D624180072402D /* Collection Cells */ = {

@@ -9,11 +9,9 @@ import UIKit
 
 class TableViewController: UIViewController {
     
-    
     @IBOutlet var activityLabel: UILabel!
     @IBOutlet var tableView: UITableView?
     @IBOutlet var segmentControl: UISegmentedControl?
-    
     
     var cells:[TableViewModel] = []
     //dynamic cell için
@@ -33,14 +31,10 @@ class TableViewController: UIViewController {
         
         let collectionItems = [TableViewItemModel(cellType: .collection, profileImage: "face1", likedImageView: nil, nameLabel: "Cecilia McGee", timeLabel: "10min ago", explanationLabel: "liked 4 your photos", commentLabel: nil)]
         
-        
         let followItems = [TableViewItemModel(cellType: .follow, profileImage: "face3", likedImageView: nil, nameLabel: "Jennie Dean", timeLabel: "1h ago", explanationLabel: "started following you", commentLabel: nil)]
         
         let commentItems = [TableViewItemModel(cellType: .comment, profileImage: "face2", likedImageView: "deneme", nameLabel: "Isaiah Bryan", timeLabel: "2 days ago", explanationLabel: "leave you a comment:", commentLabel: "So you’re going abroad, you’ve chosen your destination and you have to choose a hotel.So you’re going abroad, you’ve chosen your destination and you have to choose a hotel.So you’re going abroad, you’ve chosen your destination and you have to choose a hotel.So you’re going abroad, you’ve chosen your destination and you have to choose a hotel.So you’re going abroad, you’ve chosen your destination and you have to choose a hotel.")]
         
-//        for i in 1...30{
-//
-//        }
         cells.append(TableViewModel(items: collectionItems))
         cells.append(TableViewModel(items: followItems))
         cells.append(TableViewModel(items: commentItems))
@@ -48,13 +42,11 @@ class TableViewController: UIViewController {
         managingData(query: "nature")
     }
     
- 
     func managingData(query:String){
         NetworkManager.service.request(requestRoute: .query(query: query), responseModel: UnsplashResponse.self) { [self] details in
-           imageArray = details.results ?? []
+            imageArray = details.results ?? []
         }
     }
-    
 }
 
 extension TableViewController: UITableViewDelegate, UITableViewDataSource{

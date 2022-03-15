@@ -5,10 +5,9 @@
 //  Created by Emre Alpago on 10.03.2022.
 //
 
-//https://api.unsplash.com/search/photos?query=nature&client_id=64qv8DmNP_ztBDEq-4eQ9r7tVQtj3dvYcijhPQWhusM
+//https://api.unsplash.com/search/photos?query=natures&client_id=64qv8DmNP_ztBDEq-4eQ9r7tVQtj3dvYcijhPQWhusM
 
 import Foundation
-
 
 public enum HTTPMethod:String{
     case get = "GET"
