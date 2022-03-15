@@ -22,17 +22,17 @@ class LikedPhotosCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        
     }
-    
     
     func setupCell(cellModel: LikedCollectionViewItemModel) {
         itemModel = cellModel
         if let itemModel = self.itemModel {
-            topImageView?.image = UIImage(named: itemModel.likedImageView ?? "")
-            bottomImageView?.image = UIImage(named: itemModel.likedImageView ?? "")
+            DispatchQueue.main.async {
+                let topImageUrlPath = itemModel.likedImageView ?? ""
+                guard let topImageUrl = URL(string: topImageUrlPath) else {return}
+                self.topImageView?.downloaded(from: topImageUrl)
+                self.bottomImageView?.downloaded(from: topImageUrl)
+            }
         }
-        
     }
-
 }

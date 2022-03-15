@@ -12,22 +12,17 @@ class CollectionTableViewCell: UITableViewCell {
     static let identifier = "CollectionTableViewCell"
     
     var cells:[LikedCollectionViewModel] = []
-    var collectionCells = [Results]()
-   
+    
     @IBOutlet var profileImage: UIImageView?
     @IBOutlet var nameLabel: UILabel?
     @IBOutlet var explanationLabel: UILabel?
     @IBOutlet var timeLabel: UILabel?
     @IBOutlet var likedCollectionView: UICollectionView?
     private var itemModel: TableViewItemModel?
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        
-        let likedCollectionItems = [LikedCollectionViewItemModel(likedImageView: "deneme"),LikedCollectionViewItemModel(likedImageView: "deneme"),LikedCollectionViewItemModel(likedImageView: "deneme"),LikedCollectionViewItemModel(likedImageView: "deneme")]
-        
-        cells.append(LikedCollectionViewModel(items: likedCollectionItems))
         
         likedCollectionView?.register(LikedPhotosCollectionViewCell.nib(), forCellWithReuseIdentifier: LikedPhotosCollectionViewCell.identifier)
         likedCollectionView?.delegate = self
@@ -35,20 +30,39 @@ class CollectionTableViewCell: UITableViewCell {
         
         self.profileImage?.layer.masksToBounds = true
         self.profileImage?.layer.cornerRadius = self.profileImage!.frame.width/2.0
-       
+        
         likedCollectionView?.reloadData()
         self.nameLabel?.textColor = ColorConstants.shared.nameLabelColor
         self.explanationLabel?.textColor = ColorConstants.shared.explanationLabelColor
         self.timeLabel?.textColor = ColorConstants.shared.timeLabelColor
+        
+        managingData(query: "nature")
     }
-
+    
+    func managingData(query:String){
+        NetworkManager.service.request(requestRoute: .query(query: query), responseModel: UnsplashResponse.self) { [weak self] details in
+            guard let result = details.results else {return}
+            guard let self = self else {return}
+            var likedArray:[LikedCollectionViewItemModel] = []
+            
+            for item in result {
+                let likedModel = LikedCollectionViewItemModel(likedImageView: item.urls?.regular)
+                likedArray.append(likedModel)
+            }
+            self.cells.append(LikedCollectionViewModel(items: likedArray))
+            
+            DispatchQueue.main.async {
+                self.likedCollectionView?.reloadData()
+            }
+        }
+    }
+    
     func setupCell(cellModel: TableViewItemModel){
         itemModel = cellModel
         if let itemModel = self.itemModel {
             DispatchQueue.main.async {
-               let imageUrlPath = itemModel.profileImage ?? ""
+                let imageUrlPath = itemModel.profileImage ?? ""
                 guard let imageUrl = URL(string: imageUrlPath) else {return}
-
                 self.profileImage?.downloaded(from:imageUrl)
             }
             nameLabel?.text = itemModel.nameLabel
