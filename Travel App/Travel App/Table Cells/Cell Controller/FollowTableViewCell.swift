@@ -16,9 +16,6 @@ class FollowTableViewCell: UITableViewCell {
     @IBOutlet var explanationLabel: UILabel?
     @IBOutlet var timeLabel: UILabel?
     private var itemModel: TableViewItemModel?
-    private var resultModel: Results?
-
-    
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,26 +25,20 @@ class FollowTableViewCell: UITableViewCell {
         self.nameLabel?.textColor = ColorConstants.shared.nameLabelColor
         self.explanationLabel?.textColor = ColorConstants.shared.explanationLabelColor
         self.timeLabel?.textColor = ColorConstants.shared.timeLabelColor
-
     }
 
     func setupCell(cellModel: TableViewItemModel) {
         itemModel = cellModel
         if let itemModel = self.itemModel {
-            profileImage?.image = UIImage(named: itemModel.profileImage ?? "")
+            DispatchQueue.main.async {
+               let imageUrlPath = itemModel.profileImage ?? ""
+                guard let imageUrl = URL(string: imageUrlPath) else {return}
+
+                self.profileImage?.downloaded(from:imageUrl)
+            }
             nameLabel?.text = itemModel.nameLabel
             explanationLabel?.text = itemModel.explanationLabel
             timeLabel?.text = itemModel.timeLabel
         }
     }
-    
-//    func setupCell(cellModel: Results){
-//        resultModel = cellModel
-//        if let resultModel = self.resultModel{
-//            profileImage?.downloaded(from: resultModel.user?.profile_image?.large ?? "")
-//            nameLabel?.text = resultModel.user?.name
-//            explanationLabel?.text = CellsStringConstants.shared.followExplanation
-//            timeLabel?.text = CellsStringConstants.shared.followTime
-//        }
-//    }
 }

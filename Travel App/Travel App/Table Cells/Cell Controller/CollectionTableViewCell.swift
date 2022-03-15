@@ -20,17 +20,12 @@ class CollectionTableViewCell: UITableViewCell {
     @IBOutlet var timeLabel: UILabel?
     @IBOutlet var likedCollectionView: UICollectionView?
     private var itemModel: TableViewItemModel?
-    private var resultModel: Results?
 
-
-    
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         
         let likedCollectionItems = [LikedCollectionViewItemModel(likedImageView: "deneme"),LikedCollectionViewItemModel(likedImageView: "deneme"),LikedCollectionViewItemModel(likedImageView: "deneme"),LikedCollectionViewItemModel(likedImageView: "deneme"),LikedCollectionViewItemModel(likedImageView: "deneme"),LikedCollectionViewItemModel(likedImageView: "deneme"),LikedCollectionViewItemModel(likedImageView: "deneme"),LikedCollectionViewItemModel(likedImageView: "deneme"),LikedCollectionViewItemModel(likedImageView: "deneme"),LikedCollectionViewItemModel(likedImageView: "deneme")]
-        
         
         cells.append(LikedCollectionViewModel(items: likedCollectionItems))
         
@@ -47,27 +42,20 @@ class CollectionTableViewCell: UITableViewCell {
         self.timeLabel?.textColor = ColorConstants.shared.timeLabelColor
     }
 
-    
-    
-    func setupCell(cellModel: TableViewItemModel) {
+    func setupCell(cellModel: TableViewItemModel){
         itemModel = cellModel
         if let itemModel = self.itemModel {
-            profileImage?.image = UIImage(named: itemModel.profileImage ?? "")
+            DispatchQueue.main.async {
+               let imageUrlPath = itemModel.profileImage ?? ""
+                guard let imageUrl = URL(string: imageUrlPath) else {return}
+
+                self.profileImage?.downloaded(from:imageUrl)
+            }
             nameLabel?.text = itemModel.nameLabel
             explanationLabel?.text = itemModel.explanationLabel
             timeLabel?.text = itemModel.timeLabel
         }
     }
-    
-//    func setupCell(cellModel: Results){
-//        resultModel = cellModel
-//        if let resultModel = self.resultModel{
-//            profileImage?.downloaded(from: resultModel.user?.profile_image?.large ?? "")
-//            nameLabel?.text = resultModel.user?.name
-//            explanationLabel?.text = CellsStringConstants.shared.likeExplanation
-//            timeLabel?.text = CellsStringConstants.shared.likeTime
-//        }
-//    }
 }
 
 extension CollectionTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {

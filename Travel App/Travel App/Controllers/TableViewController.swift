@@ -14,10 +14,21 @@ class TableViewController: UIViewController {
     @IBOutlet var segmentControl: UISegmentedControl?
     
     var cells:[TableViewModel] = []
-    //dynamic cell için
     var imageArray = [Results]()
     
     let tabBarVC = UITabBarController()
+    fileprivate func prepareDumyData() {
+        let collectionItems = [TableViewItemModel(cellType: .collection, profileImage: "face1", likedImageView: nil, nameLabel: "Cecilia McGee", timeLabel: "10min ago", explanationLabel: "liked 4 your photos", commentLabel: nil)]
+        
+        let followItems = [TableViewItemModel(cellType: .follow, profileImage: "face3", likedImageView: nil, nameLabel: "Jennie Dean", timeLabel: "1h ago", explanationLabel: "started following you", commentLabel: nil)]
+        
+        let commentItems = [TableViewItemModel(cellType: .comment, profileImage: "face2", likedImageView: "deneme", nameLabel: "Isaiah Bryan", timeLabel: "2 days ago", explanationLabel: "leave you a comment:", commentLabel: "So you’re going abroad, you’ve chosen your destination and you have to choose a hotel.So you’re going abroad, you’ve chosen your destination and you have to choose a hotel.So you’re going abroad, you’ve chosen your destination and you have to choose a hotel.So you’re going abroad, you’ve chosen your destination and you have to choose a hotel.So you’re going abroad, you’ve chosen your destination and you have to choose a hotel.")]
+        
+        cells.append(TableViewModel(items: collectionItems))
+        cells.append(TableViewModel(items: followItems))
+        cells.append(TableViewModel(items: commentItems))
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,22 +40,43 @@ class TableViewController: UIViewController {
         tableView?.register(UINib(nibName: "CommendTableViewCell", bundle: nil), forCellReuseIdentifier: "CommendTableViewCell")
         tableView?.register(UINib(nibName: "FollowTableViewCell", bundle: nil), forCellReuseIdentifier: "FollowTableViewCell")
         
-        let collectionItems = [TableViewItemModel(cellType: .collection, profileImage: "face1", likedImageView: nil, nameLabel: "Cecilia McGee", timeLabel: "10min ago", explanationLabel: "liked 4 your photos", commentLabel: nil)]
-        
-        let followItems = [TableViewItemModel(cellType: .follow, profileImage: "face3", likedImageView: nil, nameLabel: "Jennie Dean", timeLabel: "1h ago", explanationLabel: "started following you", commentLabel: nil)]
-        
-        let commentItems = [TableViewItemModel(cellType: .comment, profileImage: "face2", likedImageView: "deneme", nameLabel: "Isaiah Bryan", timeLabel: "2 days ago", explanationLabel: "leave you a comment:", commentLabel: "So you’re going abroad, you’ve chosen your destination and you have to choose a hotel.So you’re going abroad, you’ve chosen your destination and you have to choose a hotel.So you’re going abroad, you’ve chosen your destination and you have to choose a hotel.So you’re going abroad, you’ve chosen your destination and you have to choose a hotel.So you’re going abroad, you’ve chosen your destination and you have to choose a hotel.")]
-        
-        cells.append(TableViewModel(items: collectionItems))
-        cells.append(TableViewModel(items: followItems))
-        cells.append(TableViewModel(items: commentItems))
-        
+
         managingData(query: "nature")
     }
     
     func managingData(query:String){
-        NetworkManager.service.request(requestRoute: .query(query: query), responseModel: UnsplashResponse.self) { [self] details in
-            imageArray = details.results ?? []
+        NetworkManager.service.request(requestRoute: .query(query: query), responseModel: UnsplashResponse.self) { [weak self] details in
+            guard let result = details.results else {return}
+            guard let self = self else {return}
+            
+            var collectionArray:[TableViewItemModel] = []
+            var commentArray:[TableViewItemModel] = []
+            var followArray:[TableViewItemModel] = []
+            
+            for item in result {
+                let collectionModel = TableViewItemModel(cellType: .collection, profileImage: item.user?.profile_image?.large , likedImageView: nil, nameLabel: item.user?.name, timeLabel: CellsStringConstants.shared.likeTime, explanationLabel: CellsStringConstants.shared.likeExplanation, commentLabel: nil)
+                collectionArray.append(collectionModel)
+            }
+            for item in result {
+                let commentModel = TableViewItemModel(cellType: .comment, profileImage: item.user?.profile_image?.large , likedImageView: item.urls?.regular, nameLabel: item.user?.name, timeLabel: CellsStringConstants.shared.commentTime, explanationLabel: CellsStringConstants.shared.commentExplanation, commentLabel: item.alt_description)
+                commentArray.append(commentModel)
+            }
+            for item in result {
+                let followModel = TableViewItemModel(cellType: .follow, profileImage: item.user?.profile_image?.large , likedImageView: nil, nameLabel: item.user?.name, timeLabel: CellsStringConstants.shared.followTime, explanationLabel: CellsStringConstants.shared.followExplanation, commentLabel: nil)
+                followArray.append(followModel)
+            }
+    
+    
+            self.cells.append(TableViewModel(items: collectionArray))
+            self.cells.append(TableViewModel(items: commentArray))
+            self.cells.append(TableViewModel(items: followArray))
+            
+            DispatchQueue.main.async {
+                self.tableView?.reloadData()
+            }
+
+       
+            
         }
     }
 }
