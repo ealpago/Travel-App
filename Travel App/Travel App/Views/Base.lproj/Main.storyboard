@@ -11,7 +11,7 @@
         <!--Red View Controller-->
         <scene sceneID="t2Q-2E-1mW">
             <objects>
-                <viewController id="O9f-lq-QzL" customClass="RedViewController" customModule="Travel_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RedViewController" id="O9f-lq-QzL" customClass="RedViewController" customModule="Travel_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mNh-EO-UDD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -124,7 +124,7 @@
         <!--Brown View Controller-->
         <scene sceneID="IN8-Rc-XC0">
             <objects>
-                <viewController id="xAf-Qh-aMA" customClass="BrownViewController" customModule="Travel_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BrownViewController" id="xAf-Qh-aMA" customClass="BrownViewController" customModule="Travel_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IWb-TJ-bba">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -134,12 +134,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ly7-KI-vQD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1987" y="159"/>
+            <point key="canvasLocation" x="1984" y="161"/>
         </scene>
         <!--Purple View Controller-->
         <scene sceneID="uh6-SK-jqi">
             <objects>
-                <viewController id="r6G-qT-PjR" customClass="PurpleViewController" customModule="Travel_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PurpleViewController" id="r6G-qT-PjR" customClass="PurpleViewController" customModule="Travel_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kI9-AR-1vv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -154,7 +154,7 @@
         <!--Base Tab Bar Controller-->
         <scene sceneID="g0a-8P-y7Q">
             <objects>
-                <viewController id="adv-q2-E2a" customClass="BaseTabBarController" customModule="Travel_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BaseTabBarController" id="adv-q2-E2a" customClass="BaseTabBarController" customModule="Travel_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4G4-az-Jmh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

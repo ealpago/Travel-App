@@ -11,15 +11,18 @@ import UIKit
 enum TabbarItemType {
     case tableView
     case collectionView
+    case redView
+    case purpleView
+    case brownView
     
-//    func name() -> String{
-//        switch self{
-//        case .tableView:
-//            return "Home"
-//        case .collectionView:
-//            return "Collection"
-//        }
-//    }
+    //    func name() -> String{
+    //        switch self{
+    //        case .tableView:
+    //            return "Home"
+    //        case .collectionView:
+    //            return "Collection"
+    //        }
+    //    }
     
     func image() -> UIImage{
         switch self{
@@ -27,6 +30,12 @@ enum TabbarItemType {
             return UIImage(named: "notification")!
         case .collectionView:
             return UIImage(named: "home")!
+        case .redView:
+            return UIImage(named: "gallery")!
+        case .purpleView:
+            return UIImage(named: "location")!
+        case .brownView:
+            return UIImage(named: "profile")!
         }
     }
     
@@ -36,23 +45,29 @@ enum TabbarItemType {
             return UIImage(named: "notification")!
         case .collectionView:
             return UIImage(named: "home")!
+        case .redView:
+            return UIImage(named: "gallery")!
+        case .purpleView:
+            return UIImage(named: "location")!
+        case .brownView:
+            return UIImage(named: "profile")!
         }
     }
-    
-    
 }
-
 
 class BaseTabBarController: UITabBarController{
     
     var items:[TabbarItemType] {
         get {
-            return [.tableView,.collectionView]
+            return [.collectionView,.redView,.purpleView,.tableView,.brownView]
         }
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTabBar()
+        UITabBar.appearance().tintColor = UIColor.black
+        tabBar.selectionIndicatorImage = UIImage().createSelectionIndicator(color: ColorConstants.shared.tabbarTintColor, size: CGSize(width: tabBar.frame.width/CGFloat(tabBar.items!.count), height: tabBar.frame.height), lineWidth: 3.0)
     }
     
     func setupTabBar(){
@@ -66,15 +81,19 @@ class BaseTabBarController: UITabBarController{
             case .tableView:
                 vc = storyBoard.instantiateViewController(withIdentifier: IdentifierConstants.shared.tableViewStoryBoardIdentifier) as! TableViewController
             case .collectionView:
-                vc = storyBoard.instantiateViewController(withIdentifier: IdentifierConstants.shared.collectionViewSotyBoardIdentifier) as! CollectionViewController
+                vc = storyBoard.instantiateViewController(withIdentifier: IdentifierConstants.shared.collectionViewStoryBoardIdentifier) as! CollectionViewController
+            case .redView:
+                vc = storyBoard.instantiateViewController(withIdentifier: IdentifierConstants.shared.redViewStoryBoardIdentifier) as! RedViewController
+            case .purpleView:
+                vc = storyBoard.instantiateViewController(withIdentifier: IdentifierConstants.shared.purpleStoryBoardIdentifier) as! PurpleViewController
+            case .brownView:
+                vc = storyBoard.instantiateViewController(withIdentifier: IdentifierConstants.shared.brownStroyBoardIdentifier) as! BrownViewController
             }
             let tabbarItem = UITabBarItem(title: nil, image: item.image(), selectedImage: item.selectedImage())
             vc.tabBarItem = tabbarItem
             viewControllers.append(vc)
         }
-        
         setViewControllers(viewControllers, animated: true)
-        
     }
     
 }
