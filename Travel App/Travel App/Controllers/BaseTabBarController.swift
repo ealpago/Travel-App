@@ -54,13 +54,24 @@ class BaseTabBarController: UITabBarController{
         }
     }
     
+    var count = 5
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTabBar()
         UITabBar.appearance().tintColor = UIColor.black
         tabBar.selectionIndicatorImage = UIImage().createSelectionIndicator(color: ColorConstants.shared.tabbarTintColor, size: CGSize(width: tabBar.frame.width/CGFloat(tabBar.items!.count), height: tabBar.frame.height), lineWidth: 3.0)
+        
+        let timer = Timer.scheduledTimer(timeInterval: TimeInterval(count), target: self, selector: #selector(BaseTabBarController.update), userInfo: nil, repeats: true)
+        print(timer)
         tabBar.items?[3].badgeValue = "1"
         UITabBarItem.appearance().badgeColor = ColorConstants.shared.tabbarTintColor
+    }
+    
+    @objc func update() {
+        if(count > 0) {
+            tabBar.items?[3].badgeValue = nil
+        }
     }
     
     func setupTabBar(){
