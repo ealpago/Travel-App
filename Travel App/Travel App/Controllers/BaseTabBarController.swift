@@ -15,15 +15,6 @@ enum TabbarItemType {
     case purpleView
     case brownView
     
-    //    func name() -> String{
-    //        switch self{
-    //        case .tableView:
-    //            return "Home"
-    //        case .collectionView:
-    //            return "Collection"
-    //        }
-    //    }
-    
     func image() -> UIImage{
         switch self{
         case .tableView:
@@ -68,6 +59,8 @@ class BaseTabBarController: UITabBarController{
         setupTabBar()
         UITabBar.appearance().tintColor = UIColor.black
         tabBar.selectionIndicatorImage = UIImage().createSelectionIndicator(color: ColorConstants.shared.tabbarTintColor, size: CGSize(width: tabBar.frame.width/CGFloat(tabBar.items!.count), height: tabBar.frame.height), lineWidth: 3.0)
+        tabBar.items?[3].badgeValue = "1"
+        UITabBarItem.appearance().badgeColor = ColorConstants.shared.tabbarTintColor
     }
     
     func setupTabBar(){
@@ -95,5 +88,4 @@ class BaseTabBarController: UITabBarController{
         }
         setViewControllers(viewControllers, animated: true)
     }
-    
 }
