@@ -11,7 +11,14 @@ class TableViewController: UIViewController {
     
     @IBOutlet var activityLabel: UILabel!
     @IBOutlet var tableView: UITableView?
-    @IBOutlet var segmentControl: UISegmentedControl?
+    @IBOutlet weak var interfaceSegmented: CustomSegmentedControl!{
+        didSet{
+                   interfaceSegmented.setButtonTitles(buttonTitles: ["You","Followers"])
+                   interfaceSegmented.selectorViewColor = .orange
+                   interfaceSegmented.selectorTextColor = .orange
+               }
+    }
+//    @IBOutlet var segmentControl: UISegmentedControl?
     
     var cells:[TableViewModel] = []
     
@@ -19,6 +26,9 @@ class TableViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let codeSegmented = CustomSegmentedControl(frame: CGRect(x: 0, y: 50, width: self.view.frame.width, height: 50), buttonTitle: ["You","Followers"])
+              codeSegmented.backgroundColor = .clear
+              view.addSubview(codeSegmented)
         
         activityLabel.textColor = ColorConstants.shared.nameLabelColor
         

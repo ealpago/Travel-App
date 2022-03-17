@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D12274CE27E31F350023C773 /* UIImage Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12274CD27E31F350023C773 /* UIImage Extension.swift */; };
+		D12274D027E339060023C773 /* Custom Segmented Control.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12274CF27E339060023C773 /* Custom Segmented Control.swift */; };
 		D15AB64227DA12B4006D1E91 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15AB64127DA12B4006D1E91 /* NetworkService.swift */; };
 		D178163027D14CF100CB3372 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D178162F27D14CF100CB3372 /* CollectionViewController.swift */; };
 		D17BB1CB27D788E60059D2D4 /* RedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17BB1CA27D788E60059D2D4 /* RedViewController.swift */; };
@@ -49,6 +50,7 @@
 
 /* Begin PBXFileReference section */
 		D12274CD27E31F350023C773 /* UIImage Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage Extension.swift"; sourceTree = "<group>"; };
+		D12274CF27E339060023C773 /* Custom Segmented Control.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Custom Segmented Control.swift"; sourceTree = "<group>"; };
 		D15AB64127DA12B4006D1E91 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		D178162F27D14CF100CB3372 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		D17BB1CA27D788E60059D2D4 /* RedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedViewController.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 			children = (
 				D18389E627DF70E1000AB354 /* UIImageViewExtension.swift */,
 				D12274CD27E31F350023C773 /* UIImage Extension.swift */,
+				D12274CF27E339060023C773 /* Custom Segmented Control.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 				D18389E227DF2C0E000AB354 /* User.swift in Sources */,
 				D18E674C27D237DA00305D9D /* TableViewModel.swift in Sources */,
 				D18C2CB127D0DB540046AEDE /* TableViewController.swift in Sources */,
+				D12274D027E339060023C773 /* Custom Segmented Control.swift in Sources */,
 				D18389D027DF23AB000AB354 /* URLS.swift in Sources */,
 				D18389D227DF25C2000AB354 /* Links.swift in Sources */,
 				D12274CE27E31F350023C773 /* UIImage Extension.swift in Sources */,
