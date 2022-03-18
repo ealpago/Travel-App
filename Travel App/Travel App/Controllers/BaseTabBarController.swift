@@ -46,6 +46,7 @@ enum TabbarItemType {
     }
 }
 
+
 class BaseTabBarController: UITabBarController{
     
     var items:[TabbarItemType] {
@@ -64,7 +65,7 @@ class BaseTabBarController: UITabBarController{
         
         let timer = Timer.scheduledTimer(timeInterval: TimeInterval(count), target: self, selector: #selector(BaseTabBarController.update), userInfo: nil, repeats: true)
         print(timer)
-        tabBar.items?[3].badgeValue = "1"
+        tabBar.items?[3].badgeValue = ""
         UITabBarItem.appearance().badgeColor = ColorConstants.shared.tabbarTintColor
     }
     
@@ -78,7 +79,7 @@ class BaseTabBarController: UITabBarController{
         var viewControllers:[UIViewController] = []
         // TODO: Generic storyBoard ViewController al
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        
+
         items.forEach { item in
             var vc = UIViewController()
             switch item{

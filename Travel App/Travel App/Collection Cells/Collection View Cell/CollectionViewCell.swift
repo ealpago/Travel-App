@@ -30,11 +30,30 @@ class CollectionViewCell: UICollectionViewCell {
     @IBOutlet var commentLabel: UILabel?
     @IBOutlet var seeCommentButton: UIButton?
     
+    private var itemModel: CollectionViewItemModel?
+    
     
     override func awakeFromNib(){
         super.awakeFromNib()
         // Initialization code
-        self.profileImageView?.layer.masksToBounds = true
-        self.profileImageView?.layer.cornerRadius = self.profileImageView!.frame.width/2.0
+    }
+    
+    func setupCell(cellModel: CollectionViewItemModel) {
+        itemModel = cellModel
+        if let itemModel = self.itemModel {
+            DispatchQueue.main.async {
+                let profileImageUrlPath = itemModel.profileImage ?? ""
+                let mainImageUrlPath = itemModel.mainImage ?? ""
+                guard let profileImageUrl = URL(string: profileImageUrlPath) else {return}
+                guard let mainImageUrl = URL(string: mainImageUrlPath) else {return}
+                self.profileImageView?.downloaded(from: profileImageUrl)
+                self.mainImageView?.downloaded(from: mainImageUrl)
+            }
+            nameLabel?.text = itemModel.nameLabel
+            minuteLabel?.text = itemModel.timeLabel
+            likeLabel?.text = itemModel.likesLabel
+            mainLabel?.text = itemModel.captionLabel
+            commentLabel?.text = itemModel.commentsLabel
+        }
     }
 }

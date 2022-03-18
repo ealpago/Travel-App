@@ -13,7 +13,7 @@ class TableViewController: UIViewController {
     @IBOutlet var tableView: UITableView?
     @IBOutlet weak var interfaceSegmented: CustomSegmentedControl!{
         didSet{
-                   interfaceSegmented.setButtonTitles(buttonTitles: ["You","Followers"])
+                   interfaceSegmented.setButtonTitles(buttonTitles: ["You","Followers","You","Followers","You","Followers"])
                    interfaceSegmented.selectorViewColor = .orange
                    interfaceSegmented.selectorTextColor = .orange
                }
@@ -26,7 +26,7 @@ class TableViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let codeSegmented = CustomSegmentedControl(frame: CGRect(x: 0, y: 50, width: self.view.frame.width, height: 50), buttonTitle: ["You","Followers"])
+        let codeSegmented = CustomSegmentedControl(frame: CGRect(x: 0, y: 50, width: self.view.frame.width, height: 50), buttonTitle: ["You","Followers","You","Followers","You","Followers"])
               codeSegmented.backgroundColor = .clear
               view.addSubview(codeSegmented)
         

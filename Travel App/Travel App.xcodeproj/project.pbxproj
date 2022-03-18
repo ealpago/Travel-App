@@ -43,6 +43,7 @@
 		D1961B6227D10EFE00F59236 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1961B6027D10EFE00F59236 /* CollectionViewCell.swift */; };
 		D1961B6327D10EFE00F59236 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1961B6127D10EFE00F59236 /* CollectionViewCell.xib */; };
 		D1BF95AD27DB396100A2F4ED /* UnsplashResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BF95AC27DB396100A2F4ED /* UnsplashResponse.swift */; };
+		D1C0A0CE27E4715300EB5632 /* CollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C0A0CD27E4715300EB5632 /* CollectionViewModel.swift */; };
 		D1E4085727D5FDFA0072402D /* LikedPhotosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E4085527D5FDFA0072402D /* LikedPhotosCollectionViewCell.swift */; };
 		D1E4085827D5FDFA0072402D /* LikedPhotosCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1E4085627D5FDFA0072402D /* LikedPhotosCollectionViewCell.xib */; };
 		D1E4085A27D61B4A0072402D /* LikedCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E4085927D61B4A0072402D /* LikedCollectionViewModel.swift */; };
@@ -87,6 +88,7 @@
 		D1961B6027D10EFE00F59236 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		D1961B6127D10EFE00F59236 /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 		D1BF95AC27DB396100A2F4ED /* UnsplashResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashResponse.swift; sourceTree = "<group>"; };
+		D1C0A0CD27E4715300EB5632 /* CollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewModel.swift; sourceTree = "<group>"; };
 		D1E4085527D5FDFA0072402D /* LikedPhotosCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedPhotosCollectionViewCell.swift; sourceTree = "<group>"; };
 		D1E4085627D5FDFA0072402D /* LikedPhotosCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LikedPhotosCollectionViewCell.xib; sourceTree = "<group>"; };
 		D1E4085927D61B4A0072402D /* LikedCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedCollectionViewModel.swift; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 				D199379827E07201009C3C26 /* Response Models */,
 				D18E674B27D237DA00305D9D /* TableViewModel.swift */,
 				D1E4085927D61B4A0072402D /* LikedCollectionViewModel.swift */,
+				D1C0A0CD27E4715300EB5632 /* CollectionViewModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -358,6 +361,7 @@
 				D18389D027DF23AB000AB354 /* URLS.swift in Sources */,
 				D18389D227DF25C2000AB354 /* Links.swift in Sources */,
 				D12274CE27E31F350023C773 /* UIImage Extension.swift in Sources */,
+				D1C0A0CE27E4715300EB5632 /* CollectionViewModel.swift in Sources */,
 				D1E4085727D5FDFA0072402D /* LikedPhotosCollectionViewCell.swift in Sources */,
 				D18C2CAD27D0DB540046AEDE /* AppDelegate.swift in Sources */,
 				D18389CC27DF1831000AB354 /* BrownViewController.swift in Sources */,

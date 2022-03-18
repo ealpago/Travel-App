@@ -46,3 +46,11 @@ struct CellsStringConstants{
     let followTime = "1h ago"
     let commentTime = "2 days ago"
 }
+
+struct CollectionStringConstants{
+    static let shared = CollectionStringConstants()
+    
+    let timeString = "1h ago"
+    let likeString = "78 likes"
+    let commentString = "see 14 comment"
+}

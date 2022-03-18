@@ -57,7 +57,7 @@ class CustomSegmentedControl: UIView {
                 let selectorPosition = frame.width/CGFloat(buttonTitles.count) * CGFloat(buttonIndex)
                 selectedIndex = buttonIndex
                 delegate?.change(to: selectedIndex)
-                UIView.animate(withDuration: 0.3) {
+                UIView.animate(withDuration: 0.5) {
                     self.selectorView.frame.origin.x = selectorPosition
                 }
                 btn.setTitleColor(selectorTextColor, for: .normal)
@@ -65,7 +65,6 @@ class CustomSegmentedControl: UIView {
         }
     }
 }
-
 //Configuration View
 extension CustomSegmentedControl {
     private func updateView() {
