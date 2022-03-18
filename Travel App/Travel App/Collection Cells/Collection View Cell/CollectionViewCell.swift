@@ -36,10 +36,8 @@ class CollectionViewCell: UICollectionViewCell {
     override func awakeFromNib(){
         super.awakeFromNib()
         // Initialization code
-        self.profileImageView?.layer.masksToBounds = true
-        self.profileImageView?.layer.cornerRadius = self.profileImageView!.frame.width/2.0
-        self.mainImageView?.layer.masksToBounds = true
-        self.mainImageView?.layer.cornerRadius = self.mainImageView!.frame.width/10.0
+        //self.profileImageView?.layer.masksToBounds = true
+        //self.profileImageView?.layer.cornerRadius = self.profileImageView!.frame.width/2.0
         nameLabel?.textColor = ColorConstants.shared.nameLabelColor
         minuteLabel?.textColor = ColorConstants.shared.timeLabelColor
         likeLabel?.textColor = ColorConstants.shared.commentLabelColor
@@ -55,8 +53,8 @@ class CollectionViewCell: UICollectionViewCell {
                 let mainImageUrlPath = itemModel.mainImage ?? ""
                 guard let profileImageUrl = URL(string: profileImageUrlPath) else {return}
                 guard let mainImageUrl = URL(string: mainImageUrlPath) else {return}
-                self.profileImageView?.downloaded(from: profileImageUrl)
-                self.mainImageView?.downloaded(from: mainImageUrl)
+//                self.profileImageView?.downloaded(from: profileImageUrl)
+//                self.mainImageView?.downloaded(from: mainImageUrl)
             }
             nameLabel?.text = itemModel.nameLabel
             minuteLabel?.text = itemModel.timeLabel
@@ -65,4 +63,5 @@ class CollectionViewCell: UICollectionViewCell {
             commentLabel?.text = itemModel.commentsLabel
         }
     }
+    
 }
