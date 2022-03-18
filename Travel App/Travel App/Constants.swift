@@ -26,6 +26,7 @@ struct ColorConstants{
     let timeLabelColor:UIColor = UIColor(red: 168/255, green: 182/255, blue: 200/255, alpha: 1)
     let commentLabelColor:UIColor = UIColor(red: 50/255, green: 59/255, blue: 69/255, alpha: 1)
     let tabbarTintColor:UIColor = UIColor(red: 250/255, green: 42/255, blue: 0/255, alpha: 1)
+    let seeCommendLabelColor:UIColor = UIColor(red: 168/255, green: 182/255, blue: 200/255, alpha: 1)
 }
 
 struct APIConstants{
@@ -54,3 +55,4 @@ struct CollectionStringConstants{
     let likeString = "78 likes"
     let commentString = "see 14 comment"
 }
+
